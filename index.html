@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dharshini — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="tabbar">
+  <div class="tabbar-left">
+    <span class="dot"></span>
+    <span class="brand">dharshini</span>
+  </div>
+  <ul class="tabs">
+    <li><a href="#work" class="tab">work.tsx</a></li>
+    <li><a href="#about" class="tab">about.md</a></li>
+    <li><a href="#contact" class="tab">contact.js</a></li>
+  </ul>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+    <span class="theme-icon">🌙</span>
+  </button>
+</nav>
+
+<header class="hero">
+  <p class="eyebrow">// portfolio.init()</p>
+  <h1 class="hero-title">
+    Hi, I'm <span class="highlight">Dharshini</span><span class="cursor" aria-hidden="true"></span>
+  </h1>
+  <p class="hero-sub">I build clean, considered things for the web.</p>
+  <div class="hero-actions">
+    <a href="#work" class="btn btn-primary">See my work</a>
+    <a href="#contact" class="btn btn-ghost">Get in touch</a>
+  </div>
+</header>
+
+<main>
+
+  <section id="work" class="section">
+    <h2 class="section-title"><span class="tag">01</span> Work</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>Project One</h3>
+        <p>A short description of what this project does and the problem it solves.</p>
+        <div class="card-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+      </article>
+      <article class="card">
+        <h3>Project Two</h3>
+        <p>Another project worth showing off — swap this copy for your real work.</p>
+        <div class="card-tags"><span>React</span><span>API</span></div>
+      </article>
+      <article class="card">
+        <h3>Project Three</h3>
+        <p>Keep each card focused: one project, one line on the outcome.</p>
+        <div class="card-tags"><span>Design</span><span>Figma</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <h2 class="section-title"><span class="tag">02</span> About</h2>
+    <p class="about-text">
+      I'm a developer who cares about the details — clean layouts, fast pages,
+      and interfaces that feel obvious to use. This space is where a couple of
+      sentences about your background, interests, and what you're looking for
+      next can live.
+    </p>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-title"><span class="tag">03</span> Contact</h2>
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name">
+        <span class="error" id="nameError"></span>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+        <span class="error" id="emailError"></span>
+      </div>
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Say hello"></textarea>
+        <span class="error" id="messageError"></span>
+      </div>
+      <button type="submit" class="btn btn-primary">Send message</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Built by Dharshini — <span id="year"></span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
